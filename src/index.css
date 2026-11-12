@@ -301,23 +301,16 @@ select {
   inset: 0;
   z-index: 0;
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e8d5c4;
 }
 
 .home-page .hero-panel:hover .hero-panel-bg {
   transform: scale(1.04);
 }
 
-.home-page .panel-1 .hero-panel-bg {
-  background: linear-gradient(160deg, #e8c9b0 0%, #f5e6da 40%, #faf3ec 100%);
-}
-
-.home-page .panel-2 .hero-panel-bg {
-  background: linear-gradient(160deg, #dbc4a0 0%, #f0e0c8 40%, #f5ead8 100%);
-}
-
-.home-page .panel-3 .hero-panel-bg {
-  background: linear-gradient(160deg, #b8cca8 0%, #d4e8d4 40%, #eef2e8 100%);
-}
 
 .home-page .hero-panel-overlay {
   position: absolute;
@@ -2315,11 +2308,6 @@ select {
 /* ─────────────────────────────────────────────
    VIVEKA SHURTHI — 4th panel & card additions
    ───────────────────────────────────────────── */
-
-/* 4th hero panel gradient */
-.home-page .panel-4 .hero-panel-bg {
-  background: linear-gradient(160deg, #c9b8d8 0%, #e4d8e8 40%, #f4eef7 100%);
-}
 
 .home-page .panel-4 .hero-panel-cta {
   color: #6a3f7a;

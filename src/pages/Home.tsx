@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import vivekaHospital from '../assets/viveka-hospital.webp';
+import vivekaClinic from '../assets/viveka-clinic.jpeg';
+import vivekaChaitanya from '../assets/viveka-chaitanya.png';
+import vivekaShurthi from '../assets/viveka-shurthi.png';
+
 type Testimonial = {
   avatar: string;
   name: string;
@@ -77,13 +82,11 @@ const TIMELINE = [
 ];
 
 const LEADERS = [
-
   {
     name: 'Mr. Arun Kumar',
     role: 'Founder & Operations Head',
     img: 'images/team/arun.jpg',
     bio: 'Mr. Arun Kumar is a Social Entrepreneur and impact-driven leader with over 25 years of experience in community development, education, housing, and mental healthcare initiatives. At Viveka Hospital, he leads strategic and operational initiatives focused on creating compassionate, scalable, and sustainable mental healthcare ecosystems. Driven by a deep commitment to social impact, he envisions integrated models of care that combine ethics, accessibility, rehabilitation, and holistic well-being, with the goal of transforming the way mental health and community care are delivered.',
-
   },
   {
     name: 'Dr. Murali Krishna T N',
@@ -91,7 +94,6 @@ const LEADERS = [
     img: 'images/team/murali.jpg',
     bio: 'Dr. Murali Krishna T N is a UK-trained psychiatrist and expert in geriatric psychiatry, dementia care, and brain health, with over 20 years of experience. He is the Clinical Head at Viveka and brings extensive expertise from nearly 15 years in the NHS, United Kingdom, where he helped establish memory clinics and specialised dementia services, A Member of the Royal College of Psychiatrists, UK, and holder of a PhD from the University of Southampton, Dr. Murali is internationally recognised for his work in dementia care, geriatric mental health, and global brain health research.',
   },
-
 ];
 
 const EXPERTISE = [
@@ -108,7 +110,7 @@ const EXPERTISE = [
 const VALUES = [
   ['01', 'Compassion', 'Care that begins with empathy and understanding.'],
   ['02', 'Dignity', 'Respectful care for every individual, regardless of circumstance.'],
-  ['05', 'Integrity', 'Transparent, ethical, and responsible healthcare practices.'],
+  ['03', 'Integrity', 'Transparent, ethical, and responsible healthcare practices.'],
 ];
 
 const WHY = [
@@ -269,7 +271,10 @@ export default function Home() {
       {/* ── HERO ── */}
       <div className="hero" id="home">
         <div className="hero-panel panel-1">
-          <div className="hero-panel-bg" />
+          <div
+            className="hero-panel-bg"
+            style={{ backgroundImage: `url(${vivekaHospital})` }}
+          />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-hospital-alt" /></div>
@@ -280,7 +285,10 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-2">
-          <div className="hero-panel-bg" />
+          <div
+            className="hero-panel-bg"
+            style={{ backgroundImage: `url(${vivekaClinic})` }}
+          />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-clinic-medical" /></div>
@@ -291,7 +299,10 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-3">
-          <div className="hero-panel-bg" />
+          <div
+            className="hero-panel-bg"
+            style={{ backgroundImage: `url(${vivekaChaitanya})` }}
+          />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-brain" /></div>
@@ -302,7 +313,10 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-4">
-          <div className="hero-panel-bg" />
+          <div
+            className="hero-panel-bg"
+            style={{ backgroundImage: `url(${vivekaShurthi})` }}
+          />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-spa" /></div>
