@@ -68,39 +68,30 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const TIMELINE = [
-  { year: '20XX', title: 'The Beginning', sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.' },
-  { year: '20xx', title: 'Strengthening Clinical Care', sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.' },
-  { year: '20xx', title: 'Viveka Hospital Established', sub: 'Launching specialised inpatient psychiatric and rehabilitation care.' },
-  { year: '20xx', title: 'Integrated Mental Healthcare Model', sub: 'Building multidisciplinary care through psychiatry, psychology, rehabilitation, and comprehensive family support.' },
+  { year: '2019', title: 'The Beginning', sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.' },
+  { year: '2019', title: 'Viveka Hospital, Integrated Mental Healthcare Model', sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.' },
+  { year: '2020', title: 'Viveka Clinic, Strengthening Clinical Care', sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.' },
+  { year: '2026', title: 'Viveka Chaitanya, Geriatric & Neuro Rehabilitation Expansion', sub: 'Strengthening services focused on ageing, dementia care, rehabilitation, and neuro support.' },
   { year: '2026', title: 'Viveka Shurthi Established', sub: 'Launching Viveka Shurthi — our fourth institution — while expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.' },
   { year: 'Looking Ahead', title: 'Looking Ahead', sub: 'Continuing to improve mental healthcare access and wellbeing for individuals and families across Karnataka.' },
 ];
 
 const LEADERS = [
-  {
-    name: 'Dr. Murali Krishna T N',
-    role: 'Founder & Clinical Director',
-    img: 'images/team/murali.jpg',
-    bio: 'Dr. Murali Krishna T N is a UK-trained psychiatrist, global mental health leader, and geriatric care expert with over 20 years of experience. With deep expertise in psychiatry, dementia care, and brain health, he brings international clinical experience and research-led approaches to mental healthcare at Viveka. His work focuses on improving mental healthcare accessibility, dementia care systems, and equitable models of care for communities.',
-  },
+
   {
     name: 'Mr. Arun Kumar',
-    role: 'Non-Clinical Director & Head of Management Services',
+    role: 'Founder & Operations Head',
     img: 'images/team/arun.jpg',
-    bio: 'With over 25 years of experience, Mr. Arun Kumar is a seasoned social entrepreneur and impact-driven leader committed to strengthening systems in mental health, education, housing, and community development. At Viveka, he leads strategic and operational initiatives focused on building humane, scalable, and sustainable mental healthcare ecosystems.',
+    bio: 'Mr. Arun Kumar is a Social Entrepreneur and impact-driven leader with over 25 years of experience in community development, education, housing, and mental healthcare initiatives. At Viveka Hospital, he leads strategic and operational initiatives focused on creating compassionate, scalable, and sustainable mental healthcare ecosystems. Driven by a deep commitment to social impact, he envisions integrated models of care that combine ethics, accessibility, rehabilitation, and holistic well-being, with the goal of transforming the way mental health and community care are delivered.',
+
   },
   {
-    name: 'Mrs. Soumya Rajagopal',
-    role: 'Director',
-    img: 'images/team/soumya.jpg',
-    bio: 'Mrs. Soumya Rajagopal brings over 15 years of experience in psychiatric clinic management and patient support systems. Passionate about heartfelt care and social impact, she plays a vital role in strengthening patient experiences and care environments at Viveka.',
+    name: 'Dr. Murali Krishna T N',
+    role: 'Co-Founder & Clinical Head',
+    img: 'images/team/murali.jpg',
+    bio: 'Dr. Murali Krishna T N is a UK-trained psychiatrist and expert in geriatric psychiatry, dementia care, and brain health, with over 20 years of experience. He is the Clinical Head at Viveka and brings extensive expertise from nearly 15 years in the NHS, United Kingdom, where he helped establish memory clinics and specialised dementia services, A Member of the Royal College of Psychiatrists, UK, and holder of a PhD from the University of Southampton, Dr. Murali is internationally recognised for his work in dementia care, geriatric mental health, and global brain health research.',
   },
-  {
-    name: 'Dr. Deepa B V',
-    role: 'Director',
-    img: 'images/team/deepa.jpg',
-    bio: 'An Oral and Maxillofacial Surgeon with a special interest in mental health and patient wellbeing, Dr. Deepa B V contributes to strengthening care delivery through organisational excellence and empathetic leadership.',
-  },
+
 ];
 
 const EXPERTISE = [
@@ -115,7 +106,7 @@ const EXPERTISE = [
 ];
 
 const VALUES = [
-  ['01', 'Compassion', 'Care that starts with listening — truly listening.'],
+  ['01', 'Compassion', 'Care that begins with empathy and understanding.'],
   ['02', 'Dignity', 'Respectful care for every individual, regardless of circumstance.'],
   ['05', 'Integrity', 'Transparent, ethical, and responsible healthcare practices.'],
 ];
@@ -417,14 +408,16 @@ export default function Home() {
         <div className="founders-inner">
           <div className="founder-portrait">
             <div className="founder-img-wrap"><i className="fas fa-user-md" /></div>
-            <div className="founder-name">Dr. Murali Krishna T N</div>
-            <div className="founder-title">Clinical Director, Viveka Group</div>
+            <div className="founder-name">Mr. Arun Kumar</div>
+            <div className="founder-title">Founder, Viveka Group</div>
           </div>
           <div className="founders-message">
             <h3>Creating a More Human Future for Mental Healthcare</h3>
-            <p>Viveka was born out of a belief that world-class mental health care should not be a privilege of geography or circumstance. Every person, in Mysore, in rural Karnataka, anywhere, deserves to be seen, heard, and cared for with genuine kindness and clinical excellence. That belief drives everything we do.</p>
-            <p>We started small. But our ambition was always large: to build something that would genuinely change how mental health is understood, accessed, and delivered in Karnataka. We are still building. And we are grateful for every family that has trusted us with something as precious as the well-being of someone they love.</p>
-            <div className="signature">— Dr. Murali Krishna T N</div>
+            <p>Viveka was founded on a simple yet profound belief — that mental healthcare is not a privilege, but a fundamental human need. No matter where a person comes from, every individual deserves to be seen, heard, and cared for with compassion, dignity, and clinical excellence.</p>
+            <p>What began as a humble initiative was inspired by a larger vision: to transform the way mental health is understood, accessed, and experienced across communities. In a world where emotional struggles often remain unseen, we aspire to create a safe, inclusive, and healing environment where people feel supported, respected, and empowered.</p>
+            <p>At Viveka, we believe true care goes beyond treatment. It is about building trust, restoring hope, reducing stigma, and making quality mental healthcare accessible and affordable to all. Every step of our journey has been guided by empathy, ethical practice, and a deep commitment to human well-being.</p>
+            <p>We are grateful to the families, professionals, and well-wishers who have placed their trust in us with something as precious as the well-being of their loved ones. As we continue to grow, our mission remains unchanged — to build a future where mental wellness is embraced with openness, understanding, and hope.</p>
+            <div className="signature">— Mr. Arun Kumar, Founder, Viveka Group</div>
           </div>
         </div>
       </section>
