@@ -30,8 +30,12 @@ export default function Header() {
             <Link to="/viveka-clinic">Viveka Clinic</Link>
           </li>
 
-          <li className={is('/viveka-haitanya') ? 'active' : ''}>
-            <Link to="/viveka-haitanya">Viveka Chaitanya</Link>
+          <li className={is('/viveka-chaitanya') ? 'active' : ''}>
+            <Link to="/viveka-chaitanya">Viveka Chaitanya</Link>
+          </li>
+
+          <li className={is('/viveka-shurthi') ? 'active' : ''}>
+            <Link to="/viveka-shurthi">Viveka Shurthi</Link>
           </li>
 
           <li className={is('/health-packages') ? 'active' : ''}>
@@ -76,7 +80,8 @@ export default function Header() {
           <Link to="/" onClick={close}>Home</Link>
           <Link to="/viveka-hospital" onClick={close}>Viveka Hospital</Link>
           <Link to="/viveka-clinic" onClick={close}>Viveka Clinic</Link>
-          <Link to="/viveka-haitanya" onClick={close}>Viveka Chaitanya</Link>
+          <Link to="/viveka-chaitanya" onClick={close}>Viveka Chaitanya</Link>
+          <Link to="/viveka-shurthi" onClick={close}>Viveka Shurthi</Link>
           <Link to="/health-packages" onClick={close}>Health Packages</Link>
           <Link to="/careers" onClick={close}>Careers</Link>
           <Link to="/contact" onClick={close}>Contact</Link>
