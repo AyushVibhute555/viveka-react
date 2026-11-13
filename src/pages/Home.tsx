@@ -4,21 +4,13 @@ import { Link } from 'react-router-dom';
 import vivekaHospital from '../assets/viveka-hospital.webp';
 import vivekaClinic from '../assets/viveka-clinic.jpeg';
 import vivekaChaitanya from '../assets/viveka-chaitanya.png';
-import vivekaShurthi from '../assets/viveka-shurthi.png';
+import vivekaSpurthi from '../assets/viveka-spurthi.png';
 
 type Testimonial = {
   avatar: string;
   name: string;
   short: string;
   full: string;
-};
-
-type FooterLocation = {
-  name: string;
-  address: string;
-  phone: string;
-  mapLink?: string;
-  mapSrc?: string;
 };
 
 const TESTIMONIALS: Testimonial[] = [
@@ -73,12 +65,42 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const TIMELINE = [
-  { year: '2019', title: 'The Beginning', sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.' },
-  { year: '2019', title: 'Viveka Hospital, Integrated Mental Healthcare Model', sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.' },
-  { year: '2020', title: 'Viveka Clinic, Strengthening Clinical Care', sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.' },
-  { year: '2026', title: 'Viveka Chaitanya, Geriatric & Neuro Rehabilitation Expansion', sub: 'Strengthening services focused on ageing, dementia care, rehabilitation, and neuro support.' },
-  { year: '2026', title: 'Viveka Shurthi Established', sub: 'Launching Viveka Shurthi — our fourth institution — while expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.' },
-  { year: 'Looking Ahead', title: 'Looking Ahead', sub: 'Continuing to improve mental healthcare access and wellbeing for individuals and families across Karnataka.' },
+  {
+    year: '2019',
+    title: 'The Beginning',
+    summary: '',
+    sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.'
+  },
+  {
+    year: '2019',
+    title: 'Viveka Hospital',
+    summary: 'Integrated Mental Healthcare Model',
+    sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.'
+  },
+  {
+    year: '2020',
+    title: 'Viveka Clinic',
+    summary: 'Mental Healthcare and Rehabilitation Center',
+    sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.'
+  },
+  {
+    year: '2026',
+    title: 'Viveka Chaitanya',
+    summary: 'Geriatric and Neurological Rehabilitation Centre',
+    sub: 'Strengthening services focused on ageing, dementia care, rehabilitation, and neuro support.'
+  },
+  {
+    year: '2026',
+    title: 'Viveka Spurthi',
+    summary: 'Early Intervention and Child Development Centre',
+    sub: 'Expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.'
+  },
+  {
+    year: 'Looking Ahead',
+    title: 'Looking Ahead',
+    summary: '',
+    sub: 'Continuing to improve mental healthcare access and wellbeing for individuals and families across Karnataka.'
+  },
 ];
 
 const LEADERS = [
@@ -98,8 +120,8 @@ const LEADERS = [
 
 const EXPERTISE = [
   ['fa-brain', 'Psychiatry & Mental Health Care'],
-  ['fa-hand-holding-heart', 'De-Addiction & Recovery Support'],
-  ['fa-user-friends', 'Geriatric Psychiatry'],
+  ['fa-hand-holding-heart', 'De-Addiction & Rehabilitation Centre'],
+  ['fa-user-friends', 'Geriatric and Neurological Rehabilitation Centre'],
   ['fa-child', 'Child & Adolescent Mental Health'],
   ['fa-comments', 'Psychological Therapy & Counselling'],
   ['fa-running', 'Physiotherapy & Occupational Therapy'],
@@ -120,40 +142,6 @@ const WHY = [
   ['04', 'Integrated Ecosystem', 'Hospital, clinic, Child Development center and Geriatric neuro rehabilitation centers services connected through one care journey.'],
   ['05', 'Family-Focused Support', 'Helping caregivers and families understand and support recovery.'],
   ['06', 'Modern Infrastructure', 'Healing environments designed to support comfort, safety, and well-being.'],
-];
-
-const FOOTER_LOCATIONS: FooterLocation[] = [
-  {
-    name: 'Viveka Hospital',
-    address: '#4, Ganga Nagar, Off Mysore Bannur Road, Vajamangala, Mysuru – 570028',
-    phone: '+91 63641 11001',
-    mapLink: 'https://share.google/4V4qraBl4WrLulDub',
-    mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31185.570618666028!2d76.70656527910155!3d12.302561700000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7354fd6f1259%3A0x2788a8e0ff317ee3!2sViveka%20Hospital!5e0!3m2!1sen!2sin!4v1779097106859!5m2!1sen!2sin',
-  },
-  {
-    name: 'Viveka Clinic',
-    address: '#511, Kalidasa Road, Vijayanagar 1st Stage, Mysuru – 570017',
-    phone: '+91 63641 11003',
-    mapLink: 'https://share.google/sIHyYA3vcoe4O2NU6',
-    mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.8490365329085!2d76.61329947482993!3d12.325946087933193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b797d09a9d9%3A0x4e3a7d211e06c9ec!2sViveka%20Clinic!5e0!3m2!1sen!2sin!4v1779095963647!5m2!1sen!2sin',
-  },
-  {
-    name: 'Viveka Chaitanya',
-    address: 'KC Layout, Nadanahalli, Mysuru – 570011',
-    phone: '+91 63641 11002',
-    mapLink: 'https://share.google/4CkFI5Gie5bfc0yY3',
-    mapSrc:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124742.28869770598!2d76.6447628087369!3d12.302548593344532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7165149542db%3A0x2cf2c25f452e7ed9!2sViveka%20Geriatric%20%26%20Neuro%20Rehabilitation%20Centre!5e0!3m2!1sen!2sin!4v1779097158295!5m2!1sen!2sin',
-  },
-  {
-    name: 'Viveka Shurthi',
-    address: 'Mysuru, Karnataka — established 2026 (address to be updated)',
-    phone: '+91 63641 11001',
-    mapLink: undefined,
-    mapSrc: undefined,
-  },
 ];
 
 export default function Home() {
@@ -271,10 +259,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <div className="hero" id="home">
         <div className="hero-panel panel-1">
-          <div
-            className="hero-panel-bg"
-            style={{ backgroundImage: `url(${vivekaHospital})` }}
-          />
+          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaHospital})` }} />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-hospital-alt" /></div>
@@ -285,10 +270,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-2">
-          <div
-            className="hero-panel-bg"
-            style={{ backgroundImage: `url(${vivekaClinic})` }}
-          />
+          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaClinic})` }} />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-clinic-medical" /></div>
@@ -299,85 +281,82 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-3">
-          <div
-            className="hero-panel-bg"
-            style={{ backgroundImage: `url(${vivekaChaitanya})` }}
-          />
+          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaChaitanya})` }} />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-brain" /></div>
             <div className="hero-panel-eyebrow">Viveka Chaitanya</div>
-            <h2>Specialised Recovery for Mind, Body &amp; Mobility</h2>
+            <h2>Geriatric and Neurological Rehabilitation Centre</h2>
             <div className="hero-panel-sub">Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.</div>
             <Link to="/viveka-chaitanya" className="hero-panel-cta">Explore Viveka Chaitanya <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
           </div>
         </div>
         <div className="hero-panel panel-4">
-          <div
-            className="hero-panel-bg"
-            style={{ backgroundImage: `url(${vivekaShurthi})` }}
-          />
+          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaSpurthi})` }} />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-spa" /></div>
-            <div className="hero-panel-eyebrow">Viveka Shurthi · Est. 2026</div>
-            <h2>New Horizons in Mental Wellness</h2>
-            <div className="hero-panel-sub">Our newest institution, established in 2026 — expanding the Viveka ecosystem with specialised programmes designed to bring healing and wellness to more individuals and families across Karnataka.</div>
-            <Link to="/viveka-shurthi" className="hero-panel-cta">Explore Viveka Shurthi <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
+            <div className="hero-panel-eyebrow">Viveka Spurthi</div>
+            <h2>Early Intervention and Child Development Centre</h2>
+            <div className="hero-panel-sub">Our newest institution, in 2026 — expanding the Viveka ecosystem with specialised programmes designed to bring healing and wellness to more individuals and families across Karnataka.</div>
+            <Link to="/viveka-spurthi" className="hero-panel-cta">Explore Viveka Spurthi <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
           </div>
-        </div>
-      </div>
-
-      {/* ── INTRO SPLIT ── */}
-      <div className="intro-split">
-        <div className="intro-split-image" />
-        <div className="intro-split-text">
-          <h2 className="headline">Thoughtful Mental Healthcare, Designed Around <em>Every Stage of Life</em></h2>
-          <p className="subline">An integrated ecosystem of mental healthcare, rehabilitation, emotional wellbeing, and geriatric support.</p>
-          <p className="body-text">Mental health journeys are deeply personal, and no two paths look the same. At Viveka, we provide specialised care through dedicated institutions designed to support individuals at every stage — from outpatient consultations and therapy to inpatient recovery, rehabilitation, and geriatric care.</p>
-          <Link to="/contact" className="btn-primary"><i className="fas fa-calendar-alt" style={{ fontSize: '0.75rem' }} /> Book Appointment</Link>
         </div>
       </div>
 
       {/* ── ABOUT ── */}
       <section className="about" id="about">
-        <div className="about-grid">
-          <div className="about-text">
-            <h2 className="section-title">About Viveka Group</h2>
-            <div className="section-label">Caring for Minds. Supporting Families. Building Hope.</div>
-            <p>At Viveka, we believe mental healthcare should be warm, accessible, and deeply human. We are committed to supporting for individuals, children, older adults, and families.</p>
-            <p>Our integrated ecosystem brings together <strong>Viveka Hospital, Viveka Clinic, Viveka Chaitanya, and Viveka Shurthi</strong> — our newest institution, established in 2026 — to provide personalised support for every stage of mental health and recovery.</p>
-            <p>Whether someone requires immediate psychiatric care, therapy, long-term rehabilitation, dementia support, or emotional guidance, we strive to ensure that every person feels seen, heard, and supported.</p>
+        <div className="about-header">
+          <h2 className="about-title">
+            Thoughtful Mental Healthcare, Designed Around <em>Every Stage of Life</em>
+          </h2>
+          <p className="about-lead">
+            An integrated ecosystem of mental healthcare, rehabilitation, emotional wellbeing, and geriatric support.
+          </p>
+        </div>
+
+        <div className="about-split">
+          <div className="about-left">
+            <h3 className="about-subheading">About Viveka</h3>
+            <div className="about-body">
+              <p>Mental health journeys are deeply personal, and no two paths look the same. At Viveka, we provide specialised care through dedicated institutions designed to support individuals at every stage — from outpatient consultations and therapy to inpatient recovery, rehabilitation, and geriatric care.</p>
+              <p>At Viveka, we believe mental healthcare should be warm, accessible, and deeply human. We are committed to supporting individuals, children, older adults, and families.</p>
+              <p>Our integrated ecosystem brings together <strong>Viveka Hospital, Viveka Clinic, Viveka Chaitanya, and Viveka Spurthi</strong> — our newest institution, to provide personalised support for every stage of mental health and recovery.</p>
+              <p>Whether someone requires immediate psychiatric care, therapy, long-term rehabilitation, dementia support, or emotional guidance, we strive to ensure that every person feels seen, heard, and supported.</p>
+            </div>
           </div>
-          <div className="about-institutions">
-            <Link to="/viveka-hospital" className="inst-feature-card hosp" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="inst-feature-icon"><i className="fas fa-hospital-alt" /></div>
-              <div>
-                <h4>Viveka Hospital</h4>
-                <p>Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.</p>
-              </div>
-            </Link>
-            <Link to="/viveka-clinic" className="inst-feature-card clinic" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="inst-feature-icon"><i className="fas fa-clinic-medical" /></div>
-              <div>
-                <h4>Viveka Clinic</h4>
-                <p>Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.</p>
-              </div>
-            </Link>
-            <Link to="/viveka-chaitanya" className="inst-feature-card gnrc" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="inst-feature-icon"><i className="fas fa-brain" /></div>
-              <div>
-                <h4>Viveka Chaitanya</h4>
-                <p>Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.</p>
-              </div>
-            </Link>
-            <Link to="/viveka-shurthi" className="inst-feature-card shurthi" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="inst-feature-icon"><i className="fas fa-spa" /></div>
-              <div>
-                <h4>Viveka Shurthi <span style={{ fontSize: '0.68rem', color: 'var(--muted-teal)', fontWeight: 600, letterSpacing: '0.06em', marginLeft: 6 }}>· EST. 2026</span></h4>
-                <p>Our newest institution, established in 2026 — expanding the Viveka ecosystem to bring specialised mental wellness care to more individuals and families.</p>
-              </div>
-            </Link>
+
+          <div className="about-right">
+            <div className="about-institutions-grid">
+              <Link to="/viveka-hospital" className="inst-feature-card hosp">
+                <div className="inst-feature-icon"><i className="fas fa-hospital-alt" /></div>
+                <div>
+                  <h4>Viveka Hospital</h4>
+                  <p>Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.</p>
+                </div>
+              </Link>
+              <Link to="/viveka-clinic" className="inst-feature-card clinic">
+                <div className="inst-feature-icon"><i className="fas fa-clinic-medical" /></div>
+                <div>
+                  <h4>Viveka Clinic</h4>
+                  <p>Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.</p>
+                </div>
+              </Link>
+              <Link to="/viveka-chaitanya" className="inst-feature-card gnrc">
+                <div className="inst-feature-icon"><i className="fas fa-brain" /></div>
+                <div>
+                  <h4>Viveka Chaitanya</h4>
+                  <p>Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.</p>
+                </div>
+              </Link>
+              <Link to="/viveka-spurthi" className="inst-feature-card spurthi">
+                <div className="inst-feature-icon"><i className="fas fa-spa" /></div>
+                <div>
+                  <h4>Viveka Spurthi <span className="inst-est">· EST. 2026</span></h4>
+                  <p>Our newest institution, expanding the Viveka ecosystem to bring specialised mental wellness care to more individuals and families.</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -453,6 +432,10 @@ export default function Home() {
                 <div className="tl-year">{t.year}</div>
                 <div className="tl-card">
                   <div className="tl-card-title">{t.title}</div>
+
+                  {/* NEW: The summary text after the comma */}
+                  {t.summary && <div className="tl-card-summary">{t.summary}</div>}
+
                   <div className="tl-card-sub">{t.sub}</div>
                 </div>
               </div>
@@ -587,83 +570,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer id="contact">
-        <div className="footer-top">
-          <div>
-            <div className="footer-brand-name">Visit Us</div>
-            <div className="footer-locations">
-              {FOOTER_LOCATIONS.map((loc) => (
-                <div key={loc.name} className="footer-location">
-                  <div className="footer-loc-map">
-                    {loc.mapSrc ? (
-                      <a href={loc.mapLink} target="_blank" rel="noopener noreferrer" title={`View ${loc.name} on Google Maps`}>
-                        <iframe src={loc.mapSrc} title={loc.name} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-                      </a>
-                    ) : (
-                      <div className="footer-loc-map-placeholder">
-                        <i className="fas fa-map-marker-alt" />
-                        <span>Map coming soon</span>
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <div className="footer-location-name">{loc.name}</div>
-                    <div className="footer-location-address">{loc.address}</div>
-                    <div className="footer-location-phone">
-                      <a href={`tel:${loc.phone.replace(/\s/g, '')}`}>{loc.phone}</a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="footer-col">
-            <h5 style={{ marginTop: 28 }}>Quick Links</h5>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><Link to="/viveka-hospital">Hospital</Link></li>
-              <li><Link to="/viveka-clinic">Clinic</Link></li>
-              <li><Link to="/viveka-chaitanya">Chaitanya</Link></li>
-              <li><Link to="/viveka-shurthi">Shurthi</Link></li>
-              <li><Link to="/health-packages">Health Packages</Link></li>
-              <li><Link to="/careers">Careers</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-            <div className="footer-email">
-              <i className="fas fa-envelope" />
-              <span><a href="mailto:info@vivekamysore.com">info@vivekamysore.com</a></span>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <span className="footer-copy">
-            © 2026 Viveka Group. All Rights Reserved.{' '}
-            <span className="footer-madeby">
-              Made with 🤍 by{' '}
-              <a href="https://peoplecomtechnologies.com" target="_blank" rel="noreferrer">
-                Peoplecom Technologies
-              </a>
-            </span>
-          </span>
-        </div>
-      </footer>
-
-      {/* ── STICKY BAR ── */}
-      <div className="sticky-bar">
-        <span>Need help? Call us 24×7</span>
-        <button
-          className="btn-primary"
-          style={{ fontSize: '0.75rem', padding: '7px 16px' }}
-          onClick={() => window.location.assign('tel:+916364111001')}
-        >
-          <i className="fas fa-phone" style={{ fontSize: '0.65rem' }} /> Call Now
-        </button>
-        <a href="https://wa.me/916364111001" className="whatsapp" aria-label="WhatsApp">
-          <i className="fab fa-whatsapp" />
-        </a>
-      </div>
     </div>
   );
 }

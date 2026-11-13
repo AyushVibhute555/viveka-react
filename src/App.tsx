@@ -2,13 +2,13 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import FloatPhone from './components/FloatPhone';
+import StickyBar from './components/StickyBar';
 
 import Home from './pages/Home';
 import VivekaHospital from './pages/VivekaHospital';
 import VivekaClinic from './pages/VivekaClinic';
 import VivekaChaitanya from './pages/VivekaChaitanya';
-import VivekaShurthi from './pages/VivekaShurthi';
+import VivekaSpurthi from './pages/VivekaSpurthi';
 import HealthPackages from './pages/HealthPackages';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
@@ -29,9 +29,6 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const { pathname } = useLocation();
-  const isHome = pathname === '/';
-
   return (
     <>
       <ScrollToTop />
@@ -42,14 +39,14 @@ export default function App() {
           <Route path="/viveka-hospital" element={<VivekaHospital />} />
           <Route path="/viveka-clinic" element={<VivekaClinic />} />
           <Route path="/viveka-chaitanya" element={<VivekaChaitanya />} />
-          <Route path="/viveka-shurthi" element={<VivekaShurthi />} />
+          <Route path="/viveka-spurthi" element={<VivekaSpurthi />} />
           <Route path="/health-packages" element={<HealthPackages />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      {!isHome && <Footer />}
-      {!isHome && <FloatPhone />}
+      <Footer />
+      <StickyBar />
     </>
   );
 }
