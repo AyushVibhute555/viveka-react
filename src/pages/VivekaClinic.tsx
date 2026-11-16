@@ -10,7 +10,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'RAJANI RAGHUNANDANA',
-    role: 'Consultant Clinical Psychologist',
+    role: 'Consultant Psychologist',
     initials: 'RR',
     bio: "Rajani Raghunandana is a Clinical Psychologist with over 12 years of experience in mental healthcare across both healthcare and corporate settings.<br><br>Her areas of expertise include Cognitive Behavioural Therapy (CBT), family and couple counselling, child psychotherapy, neuropsychology, de-addiction therapies, behavioural interventions, conflict resolution, career counselling, and employee wellbeing programmes.<br><br>Professionally trained through the National Institute of Mental Health and Neurosciences (NIMHANS), Rajani is deeply committed to helping individuals, families, and students navigate emotional and behavioural challenges through evidence-based therapeutic care and compassionate support."
   },
