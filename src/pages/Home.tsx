@@ -69,37 +69,37 @@ const TIMELINE = [
     year: '2019',
     title: 'The Beginning',
     summary: '',
-    sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.'
+    sub: 'A vision to create heart-led mental healthcare that prioritises dignity and accessibility.',
   },
   {
     year: '2019',
     title: 'Viveka Hospital',
     summary: 'Integrated Mental Healthcare Model',
-    sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.'
+    sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.',
   },
   {
     year: '2020',
     title: 'Viveka Clinic',
     summary: 'Mental Healthcare and Rehabilitation Center',
-    sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.'
+    sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.',
   },
   {
     year: '2026',
     title: 'Viveka Chaitanya',
     summary: 'Geriatric and Neurological Rehabilitation Centre',
-    sub: 'Strengthening services focused on ageing, dementia care, rehabilitation, and neuro support.'
+    sub: 'Strengthening services focused on ageing, dementia care, rehabilitation, and neuro support.',
   },
   {
     year: '2026',
     title: 'Viveka Spoorthi',
     summary: 'Early Intervention and Child Development Centre',
-    sub: 'Expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.'
+    sub: 'Expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.',
   },
   {
     year: 'Looking Ahead',
     title: 'Looking Ahead',
     summary: '',
-    sub: 'Continuing to improve mental healthcare access and wellbeing for individuals and families across Karnataka.'
+    sub: 'Continuing to improve mental healthcare access and wellbeing for individuals and families across Karnataka.',
   },
 ];
 
@@ -144,7 +144,58 @@ const WHY = [
   ['06', 'Modern Infrastructure', 'Healing environments designed to support comfort, safety, and well-being.'],
 ];
 
+/* ── HERO PANELS (data-driven) ── */
+const HERO_PANELS = [
+  {
+    key: 'hospital',
+    num: '01',
+    eyebrow: 'Viveka Hospital',
+    title: 'Mental Healthcare & Rehabilitation',
+    sub: 'Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.',
+    to: '/viveka-hospital',
+    cta: 'Explore Viveka Hospital',
+    icon: 'fa-hospital-alt',
+    img: vivekaHospital,
+  },
+  {
+    key: 'clinic',
+    num: '02',
+    eyebrow: 'Viveka Clinic',
+    title: 'Consultations, Therapy & Emotional Wellbeing',
+    sub: 'Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.',
+    to: '/viveka-clinic',
+    cta: 'Explore Viveka Clinic',
+    icon: 'fa-clinic-medical',
+    img: vivekaClinic,
+  },
+  {
+    key: 'chaitanya',
+    num: '03',
+    eyebrow: 'Viveka Chaitanya',
+    title: 'Geriatric and Neurological Rehabilitation Centre',
+    sub: 'Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.',
+    to: '/viveka-chaitanya',
+    cta: 'Explore Viveka Chaitanya',
+    icon: 'fa-brain',
+    img: vivekaChaitanya,
+  },
+  {
+    key: 'spoorthi',
+    num: '04',
+    eyebrow: 'Viveka Spoorthi',
+    title: 'Early Intervention and Child Development Centre',
+    sub: 'Our newest institution, in 2026 — expanding the Viveka ecosystem with specialised programmes designed to bring healing and wellness to more individuals and families across Karnataka.',
+    to: '/viveka-spoorthi',
+    cta: 'Explore Viveka Spoorthi',
+    icon: 'fa-spa',
+    img: vivekaSpoorthi,
+  },
+];
+
 export default function Home() {
+  /* ── HERO ── */
+  const [activePanel, setActivePanel] = useState(0);
+
   /* ── TIMELINE SCROLL ANIMATION ── */
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>('.home-page .tl-item');
@@ -257,52 +308,44 @@ export default function Home() {
   return (
     <div className="home-page">
       <h1 className="sr-only">Viveka Mental Healthcare and Rehabilitation</h1>
-      {/* ── HERO ── */}
+
+      {/* ── HERO (premium editorial gallery) ── */}
       <div className="hero" id="home">
-        <div className="hero-panel panel-1">
-          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaHospital})` }} />
-          <div className="hero-panel-overlay" />
-          <div className="hero-panel-content">
-            <div className="hero-panel-icon"><i className="fas fa-hospital-alt" /></div>
-            <div className="hero-panel-eyebrow">Viveka Hospital</div>
-            <h2>Mental Healthcare &amp; Rehabilitation</h2>
-            <div className="hero-panel-sub">Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.</div>
-            <Link to="/viveka-hospital" className="hero-panel-cta">Explore Viveka Hospital <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
+        {HERO_PANELS.map((p, i) => (
+          <div
+            key={p.key}
+            className={`hero-panel panel-${i + 1}${activePanel === i ? ' active' : ''}`}
+            onMouseEnter={() => setActivePanel(i)}
+            onClick={() => setActivePanel(i)}
+          >
+            <div className="hero-panel-bg" style={{ backgroundImage: `url(${p.img})` }} />
+            <div className="hero-panel-overlay" />
+            <div className="hero-panel-frame" aria-hidden="true" />
+
+            <div className="hero-panel-rail" aria-hidden="true">
+              <span className="hero-panel-rail-number">{p.num}</span>
+              <span className="hero-panel-rail-line" />
+              <span className="hero-panel-rail-label">{p.eyebrow}</span>
+            </div>
+
+            <div className="hero-panel-content">
+              <div className="hero-panel-icon">
+                <i className={`fas ${p.icon}`} />
+              </div>
+              <div className="hero-panel-eyebrow">{p.eyebrow}</div>
+              <h2>{p.title}</h2>
+              <p className="hero-panel-sub">{p.sub}</p>
+              <Link
+                to={p.to}
+                className="hero-panel-cta"
+                onFocus={() => setActivePanel(i)}
+              >
+                <span>{p.cta}</span>
+                <i className="fas fa-arrow-right" />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="hero-panel panel-2">
-          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaClinic})` }} />
-          <div className="hero-panel-overlay" />
-          <div className="hero-panel-content">
-            <div className="hero-panel-icon"><i className="fas fa-clinic-medical" /></div>
-            <div className="hero-panel-eyebrow">Viveka Clinic</div>
-            <h2>Consultations, Therapy &amp; Emotional Wellbeing</h2>
-            <div className="hero-panel-sub">Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.</div>
-            <Link to="/viveka-clinic" className="hero-panel-cta">Explore Viveka Clinic <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
-          </div>
-        </div>
-        <div className="hero-panel panel-3">
-          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaChaitanya})` }} />
-          <div className="hero-panel-overlay" />
-          <div className="hero-panel-content">
-            <div className="hero-panel-icon"><i className="fas fa-brain" /></div>
-            <div className="hero-panel-eyebrow">Viveka Chaitanya</div>
-            <h2>Geriatric and Neurological Rehabilitation Centre</h2>
-            <div className="hero-panel-sub">Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.</div>
-            <Link to="/viveka-chaitanya" className="hero-panel-cta">Explore Viveka Chaitanya <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
-          </div>
-        </div>
-        <div className="hero-panel panel-4">
-          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaSpoorthi})` }} />
-          <div className="hero-panel-overlay" />
-          <div className="hero-panel-content">
-            <div className="hero-panel-icon"><i className="fas fa-spa" /></div>
-            <div className="hero-panel-eyebrow">Viveka Spoorthi</div>
-            <h2>Early Intervention and Child Development Centre</h2>
-            <div className="hero-panel-sub">Our newest institution, in 2026 — expanding the Viveka ecosystem with specialised programmes designed to bring healing and wellness to more individuals and families across Karnataka.</div>
-            <Link to="/viveka-spoorthi" className="hero-panel-cta">Explore Viveka Spoorthi <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* ── ABOUT ── */}
@@ -433,10 +476,7 @@ export default function Home() {
                 <div className="tl-year">{t.year}</div>
                 <div className="tl-card">
                   <div className="tl-card-title">{t.title}</div>
-
-                  {/* NEW: The summary text after the comma */}
                   {t.summary && <div className="tl-card-summary">{t.summary}</div>}
-
                   <div className="tl-card-sub">{t.sub}</div>
                 </div>
               </div>
@@ -570,7 +610,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
