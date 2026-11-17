@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import vivekaHospital from '../assets/viveka-hospital.webp';
-import vivekaClinic from '../assets/viveka-clinic.jpeg';
+import vivekaHospital from '../assets/viveka-hospital.png';
+import vivekaClinic from '../assets/viveka-clinic.png';
 import vivekaChaitanya from '../assets/viveka-chaitanya.png';
 import vivekaSpoorthi from '../assets/viveka-spoorthi.png';
 

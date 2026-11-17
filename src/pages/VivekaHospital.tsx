@@ -526,7 +526,7 @@ export default function VivekaHospital() {
               <div className="vhp-service-side">
                 <h3>Psychiatric Intensive Care Unit</h3>
                 <p className="vhp-italic-txt">Acute Care for Critical Mental Health Needs</p>
-                <p>For individuals experiencing <span className="vhp-hl">severe psychiatric distress</span> or <span className="vhp-hl">acute mental health conditions</span> requiring <span className="vhp-hl">close supervision</span>, our Psychiatric Intensive Care Unit (PICU) provides, acute care in a safe environment.</p>
+                <p>For individuals experiencing <span className="vhp-hl">severe psychiatric distress</span> or <span className="vhp-hl">acute mental health conditions</span> requiring <span className="vhp-hl">close supervision</span>, our Psychiatric Intensive Care Unit (PICU) provides,  intensive care in a safe environment.</p>
                 <h3>A High Dependency Unit (HDU)</h3>
                 <p className="vhp-italic-txt">Stepdown Intensive care unit</p>
                 <p>The focus is on <span className="vhp-hl">stabilisation, safety, continuous monitoring</span>, and compassionate support to help individuals move towards <span className="vhp-hl">recovery</span> and clinical care.</p>

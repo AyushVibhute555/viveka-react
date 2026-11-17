@@ -1,9 +1,22 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import hospitalLogo from '../assets/viveka hospital logo.png';
+import clinicLogo from '../assets/viveka clinic logo.png';
+import chaitanyaLogo from '../assets/viveka chitanya logo.png';
+import spoorthiLogo from '../assets/viveka spoorthi.png';
+
+const PAGE_LOGOS: Record<string, { src: string; alt: string }> = {
+  '/viveka-hospital': { src: hospitalLogo, alt: 'Viveka Hospital' },
+  '/viveka-clinic': { src: clinicLogo, alt: 'Viveka Clinic' },
+  '/viveka-chaitanya': { src: chaitanyaLogo, alt: 'Viveka Chaitanya' },
+  '/viveka-spoorthi': { src: spoorthiLogo, alt: 'Viveka Spoorthi' },
+};
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { pathname } = useLocation();
+  const pageLogo = PAGE_LOGOS[pathname];
+  const logo = pageLogo ?? { src: '/logo.png', alt: 'Viveka' };
 
   const is = (path: string) => pathname === path;
   const close = () => setMobileOpen(false);
@@ -13,7 +26,11 @@ export default function Header() {
       <nav>
         <div className="nav-logo">
           <Link to="/" onClick={close}>
-            <img src="/logo.png" alt="Viveka Logo" className="nav-logo-img" />
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className={`nav-logo-img${pageLogo ? '' : ' nav-logo-img--brand'}`}
+            />
           </Link>
         </div>
 
