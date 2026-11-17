@@ -766,18 +766,35 @@ button:disabled {
   position: absolute;
   inset: 0;
   z-index: 0;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #e8d5c4;
-  background-size: cover;
-  background-position: center center;
+}
+
+.home-page .hero-panel-bg::before,
+.home-page .hero-panel-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-.home-page .hero-panel:hover .hero-panel-bg {
-  transform: scale(1.04);
+.home-page .hero-panel-bg::before {
+  background-size: cover;
+  filter: blur(14px);
+  transform: scale(1.08);
+}
+
+.home-page .hero-panel-bg::after {
+  background-size: contain;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-page .hero-panel:hover .hero-panel-bg::after {
+  transform: scale(1.03);
 }
 
 
