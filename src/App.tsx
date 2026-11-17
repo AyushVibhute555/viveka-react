@@ -8,8 +8,7 @@ import Home from './pages/Home';
 import VivekaHospital from './pages/VivekaHospital';
 import VivekaClinic from './pages/VivekaClinic';
 import VivekaChaitanya from './pages/VivekaChaitanya';
-import VivekaSpurthi from './pages/VivekaSpurthi';
-import HealthPackages from './pages/HealthPackages';
+import VivekaSpoorthi from './pages/VivekaSpoorthi';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 
@@ -39,8 +38,7 @@ export default function App() {
           <Route path="/viveka-hospital" element={<VivekaHospital />} />
           <Route path="/viveka-clinic" element={<VivekaClinic />} />
           <Route path="/viveka-chaitanya" element={<VivekaChaitanya />} />
-          <Route path="/viveka-spurthi" element={<VivekaSpurthi />} />
-          <Route path="/health-packages" element={<HealthPackages />} />
+          <Route path="/viveka-spoorthi" element={<VivekaSpoorthi />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

@@ -142,7 +142,7 @@ export default function VivekaHospital() {
           background: var(--vhp-cream);
           color: var(--vhp-text-dark);
           line-height: 1.6;
-          overflow-x: hidden;
+          overflow-x: clip;
           font-family: 'Google Sans Flex', sans-serif;
         }
 
@@ -150,9 +150,10 @@ export default function VivekaHospital() {
         .vhp-hero {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          min-height: calc(100vh - 108px);
+          min-height: calc(100svh - var(--header-h));
+          min-height: calc(100vh - var(--header-h));
           overflow: hidden;
-          margin-top: 108px; /* offset for fixed global header */
+          margin-top: 0;
         }
         .vhp-hero-left {
           display: flex;

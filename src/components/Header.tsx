@@ -34,12 +34,8 @@ export default function Header() {
             <Link to="/viveka-chaitanya">Viveka Chaitanya</Link>
           </li>
 
-          <li className={is('/viveka-spurthi') ? 'active' : ''}>
-            <Link to="/viveka-spurthi">Viveka Spurthi</Link>
-          </li>
-
-          <li className={is('/health-packages') ? 'active' : ''}>
-            <Link to="/health-packages">Health Packages</Link>
+          <li className={is('/viveka-spoorthi') ? 'active' : ''}>
+            <Link to="/viveka-spoorthi">Viveka Spoorthi</Link>
           </li>
 
           <li className={is('/careers') ? 'active' : ''}>
@@ -60,8 +56,11 @@ export default function Header() {
 
         <button
           className="nav-hamburger"
+          type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           <i className={mobileOpen ? 'fas fa-times' : 'fas fa-bars'} />
         </button>
@@ -76,13 +75,12 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="mobile-menu open">
+        <div id="mobile-menu" className="mobile-menu open" aria-label="Mobile navigation">
           <Link to="/" onClick={close}>Home</Link>
           <Link to="/viveka-hospital" onClick={close}>Viveka Hospital</Link>
           <Link to="/viveka-clinic" onClick={close}>Viveka Clinic</Link>
           <Link to="/viveka-chaitanya" onClick={close}>Viveka Chaitanya</Link>
-          <Link to="/viveka-spurthi" onClick={close}>Viveka Spurthi</Link>
-          <Link to="/health-packages" onClick={close}>Health Packages</Link>
+          <Link to="/viveka-spoorthi" onClick={close}>Viveka Spoorthi</Link>
           <Link to="/careers" onClick={close}>Careers</Link>
           <Link to="/contact" onClick={close}>Contact</Link>
           <a href="tel:+916364111001" className="mobile-cta" onClick={close}>Emergency</a>

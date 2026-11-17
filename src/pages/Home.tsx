@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import vivekaHospital from '../assets/viveka-hospital.webp';
 import vivekaClinic from '../assets/viveka-clinic.jpeg';
 import vivekaChaitanya from '../assets/viveka-chaitanya.png';
-import vivekaSpurthi from '../assets/viveka-spurthi.png';
+import vivekaSpoorthi from '../assets/viveka-spoorthi.png';
 
 type Testimonial = {
   avatar: string;
@@ -91,7 +91,7 @@ const TIMELINE = [
   },
   {
     year: '2026',
-    title: 'Viveka Spurthi',
+    title: 'Viveka Spoorthi',
     summary: 'Early Intervention and Child Development Centre',
     sub: 'Expanding geriatric, dementia, and neuro rehabilitation services across Karnataka.'
   },
@@ -256,6 +256,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <h1 className="sr-only">Viveka Mental Healthcare and Rehabilitation</h1>
       {/* ── HERO ── */}
       <div className="hero" id="home">
         <div className="hero-panel panel-1">
@@ -292,14 +293,14 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-panel panel-4">
-          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaSpurthi})` }} />
+          <div className="hero-panel-bg" style={{ backgroundImage: `url(${vivekaSpoorthi})` }} />
           <div className="hero-panel-overlay" />
           <div className="hero-panel-content">
             <div className="hero-panel-icon"><i className="fas fa-spa" /></div>
-            <div className="hero-panel-eyebrow">Viveka Spurthi</div>
+            <div className="hero-panel-eyebrow">Viveka Spoorthi</div>
             <h2>Early Intervention and Child Development Centre</h2>
             <div className="hero-panel-sub">Our newest institution, in 2026 — expanding the Viveka ecosystem with specialised programmes designed to bring healing and wellness to more individuals and families across Karnataka.</div>
-            <Link to="/viveka-spurthi" className="hero-panel-cta">Explore Viveka Spurthi <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
+            <Link to="/viveka-spoorthi" className="hero-panel-cta">Explore Viveka Spoorthi <i className="fas fa-arrow-right" style={{ fontSize: '0.75rem' }} /></Link>
           </div>
         </div>
       </div>
@@ -321,7 +322,7 @@ export default function Home() {
             <div className="about-body">
               <p>Mental health journeys are deeply personal, and no two paths look the same. At Viveka, we provide specialised care through dedicated institutions designed to support individuals at every stage — from outpatient consultations and therapy to inpatient recovery, rehabilitation, and geriatric care.</p>
               <p>At Viveka, we believe mental healthcare should be warm, accessible, and deeply human. We are committed to supporting individuals, children, older adults, and families.</p>
-              <p>Our integrated ecosystem brings together <strong>Viveka Hospital, Viveka Clinic, Viveka Chaitanya, and Viveka Spurthi</strong> — our newest institution, to provide personalised support for every stage of mental health and recovery.</p>
+              <p>Our integrated ecosystem brings together <strong>Viveka Hospital, Viveka Clinic, Viveka Chaitanya, and Viveka Spoorthi</strong> — our newest institution, to provide personalised support for every stage of mental health and recovery.</p>
               <p>Whether someone requires immediate psychiatric care, therapy, long-term rehabilitation, dementia support, or emotional guidance, we strive to ensure that every person feels seen, heard, and supported.</p>
             </div>
           </div>
@@ -349,11 +350,11 @@ export default function Home() {
                   <p>Specialised rehabilitation and supportive care for older adults and individuals recovering from neurological and psychiatric conditions.</p>
                 </div>
               </Link>
-              <Link to="/viveka-spurthi" className="inst-feature-card spurthi">
+              <Link to="/viveka-spoorthi" className="inst-feature-card spoorthi">
                 <div className="inst-feature-icon"><i className="fas fa-spa" /></div>
                 <div>
-                  <h4>Viveka Spurthi <span className="inst-est">· EST. 2026</span></h4>
-                  <p>Our newest institution, expanding the Viveka ecosystem to bring specialised mental wellness care to more individuals and families.</p>
+                  <h4>Viveka Spoorthi</h4>
+                  <p>Our institution, expanding the Viveka ecosystem to bring specialised mental wellness care to more individuals and families.</p>
                 </div>
               </Link>
             </div>
@@ -512,11 +513,11 @@ export default function Home() {
         <div className="testi-controls">
           <div className="testi-dots" role="tablist">
             {dots.map((i) => (
-              <div
+              <button
                 key={i}
+                type="button"
                 className={`testi-dot${i === current ? ' active' : ''}`}
                 onClick={() => setCurrent(i)}
-                role="button"
                 aria-label={`Slide ${i + 1}`}
               />
             ))}
@@ -543,7 +544,7 @@ export default function Home() {
               return (
                 <div key={i} className="testi-slide">
                   <div className="testimonial-card">
-                    <div className="stars">★★★★★</div>
+                    <div className="stars" aria-label="5 out of 5 stars" role="img">★★★★★</div>
                     <p className="testi-text">
                       {t.short}
                       {isOpen && (

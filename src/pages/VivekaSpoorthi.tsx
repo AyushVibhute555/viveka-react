@@ -1,11 +1,11 @@
 import PageHero from '../components/PageHero';
 import CTAStrip from '../components/CTAStrip';
 
-export default function VivekaSpurthi() {
+export default function VivekaSpoorthi() {
   return (
     <>
       <PageHero
-        eyebrow="Viveka Spurthi · Est. 2026"
+        eyebrow="Viveka Spoorthi · Est. 2026"
         title={<>New Horizons in <em>Mental Wellness</em></>}
         description="Our newest institution, established in 2026 — content coming soon."
       />

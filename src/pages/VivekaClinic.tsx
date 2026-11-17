@@ -81,7 +81,7 @@ export default function VivekaClinic() {
           background: var(--vcl-cream);
           color: var(--vcl-text-dark);
           line-height: 1.6;
-          overflow-x: hidden;
+          overflow-x: clip;
           font-family: 'Google Sans Flex', sans-serif;
         }
 
@@ -107,7 +107,7 @@ export default function VivekaClinic() {
         /* ── HERO ── */
         .vcl-wrap .vcl-hero {
           display: grid; grid-template-columns: 1fr 1fr;
-          min-height: calc(100vh - 108px); overflow: hidden; margin-top: 108px;
+          min-height: calc(100svh - var(--header-h)); min-height: calc(100vh - var(--header-h)); overflow: hidden; margin-top: 0;
         }
         .vcl-wrap .vcl-hero-left {
           display: flex; flex-direction: column; justify-content: center;

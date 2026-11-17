@@ -23,7 +23,7 @@ const FOOTER_LOCATIONS = [
     mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124742.28869770598!2d76.6447628087369!3d12.302548593344532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7165149542db%3A0x2cf2c25f452e7ed9!2sViveka%20Geriatric%20%26%20Neuro%20Rehabilitation%20Centre!5e0!3m2!1sen!2sin!4v1779097158295!5m2!1sen!2sin',
   },
   {
-    name: 'Viveka Spurthi',
+    name: 'Viveka Spoorthi',
     address: 'Mysuru, Karnataka  (address to be updated)',
     phone: '+91 63641 11001',
     mapLink: undefined,
@@ -64,14 +64,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-col">
-          <h5 style={{ marginTop: 28 }}>Quick Links</h5>
+          <h5>Quick Links</h5>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/viveka-hospital">Hospital</Link></li>
             <li><Link to="/viveka-clinic">Clinic</Link></li>
             <li><Link to="/viveka-chaitanya">Chaitanya</Link></li>
-            <li><Link to="/viveka-spurthi">Spurthi</Link></li>
-            <li><Link to="/health-packages">Health Packages</Link></li>
+            <li><Link to="/viveka-spoorthi">Spoorthi</Link></li>
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><a href="#">Privacy Policy</a></li>
