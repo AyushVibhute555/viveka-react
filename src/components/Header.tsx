@@ -83,13 +83,13 @@ export default function Header() {
         </button>
       </nav>
 
-      <div className="emergency-strip">
+      {/* <div className="emergency-strip">
         <span><strong>Psychiatric Emergency?</strong> &nbsp;Our hospital is open 24 hours a day, 7 days a week.</span>
         <a href="tel:+916364111001">
           <i className="fas fa-phone" style={{ fontSize: '0.65rem' }} /> &nbsp;Call +91 63641 11001
         </a>
         <a href="https://wa.me/916364111001">WhatsApp Us</a>
-      </div>
+      </div> */}
 
       {mobileOpen && (
         <div id="mobile-menu" className="mobile-menu open" aria-label="Mobile navigation">
