@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 
 const FOOTER_LOCATIONS = [
   {
-    name: 'Viveka Hospital',
+    name: 'Viveka Chethana',
     address: '#4, Ganga Nagar, Off Mysore Bannur Road, Vajamangala, Mysuru – 570028',
     phone: '+91 63641 11001',
     mapLink: 'https://share.google/4V4qraBl4WrLulDub',
     mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31185.570618666028!2d76.70656527910155!3d12.302561700000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7354fd6f1259%3A0x2788a8e0ff317ee3!2sViveka%20Hospital!5e0!3m2!1sen!2sin!4v1779097106859!5m2!1sen!2sin',
   },
   {
-    name: 'Viveka Clinic',
+    name: 'Viveka Sparsha',
     address: '#511, Kalidasa Road, Vijayanagar 1st Stage, Mysuru – 570017',
     phone: '+91 63641 11003',
     mapLink: 'https://share.google/sIHyYA3vcoe4O2NU6',
@@ -67,8 +67,8 @@ export default function Footer() {
           <h5>Quick Links</h5>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/viveka-hospital">Hospital</Link></li>
-            <li><Link to="/viveka-clinic">Clinic</Link></li>
+            <li><Link to="/viveka-chethana">Chethana</Link></li>
+            <li><Link to="/viveka-sparsha">Sparsha</Link></li>
             <li><Link to="/viveka-chaitanya">Chaitanya</Link></li>
             <li><Link to="/viveka-spoorthi">Spoorthi</Link></li>
             <li><Link to="/careers">Careers</Link></li>

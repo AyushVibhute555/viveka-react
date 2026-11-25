@@ -45,12 +45,12 @@ const FAQS = [
   },
   {
     q: 'Do you offer both OPD and admission services?',
-    a: 'Yes. Viveka Hospital offers both outpatient consultations and inpatient psychiatric care. Our care pathways are personalised to ensure continuity of care at every stage of recovery, whether you need a single consultation or long-term residential support.'
+    a: 'Yes. Viveka Chethana offers both outpatient consultations and inpatient psychiatric care. Our care pathways are personalised to ensure continuity of care at every stage of recovery, whether you need a single consultation or long-term residential support.'
   },
 
   // --- New Additions ---
   {
-    q: 'What conditions do you treat at Viveka Hospital?',
+    q: 'What conditions do you treat at Viveka Chethana?',
     a: 'We treat a wide range of mental health conditions including depression, anxiety disorders, bipolar disorder, schizophrenia, obsessive-compulsive disorder (OCD), post-traumatic stress disorder (PTSD), and substance use disorders (de-addiction). We also provide geriatric and child/adolescent psychiatric care.'
   },
   {
@@ -119,6 +119,7 @@ export default function VivekaHospital() {
       <style>{`
         /* ═══════════════════════════════════════════════════════════
            VIVEKA HOSPITAL PAGE SCOPED CSS
+           (Layout, gutters, hero & section padding inherit from index.css)
         ═══════════════════════════════════════════════════════════ */
         .vhp-wrap {
           --vhp-primary: #7A3010;
@@ -138,70 +139,28 @@ export default function VivekaHospital() {
           --vhp-border: #E8D5C4;
           --vhp-sage: #CBD5BC;
           --vhp-sage-light: #eef2e8;
-          
-          background: var(--vhp-cream);
-          color: var(--vhp-text-dark);
-          line-height: 1.6;
-          overflow-x: clip;
-          font-family: 'Google Sans Flex', sans-serif;
         }
 
-        /* --- HERO --- */
-        .vhp-hero {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          min-height: calc(100svh - var(--header-h));
-          min-height: calc(100vh - var(--header-h));
-          overflow: hidden;
-          margin-top: 0;
-        }
-        .vhp-hero-left {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding: 72px 56px 72px 72px;
-          background: var(--vhp-sand);
-          position: relative;
-        }
+        /* --- HERO ANIMATIONS & RIGHT PANEL --- */
         .vhp-hero-eyebrow {
-          display: flex; align-items: center; gap: 10px;
-          font-size: 1.6rem; font-weight: 700; text-transform: uppercase;
-          letter-spacing: 0.16em; color: var(--vhp-terracotta); margin-bottom: 20px;
-          opacity: 0; animation: vhpFadeUp 0.7s 0.2s forwards;
+          opacity: 0;
+          animation: vhpFadeUp 0.7s 0.2s forwards;
         }
         .vhp-hero-h1 {
-          font-size: clamp(0.8rem, 2vw, 1.8rem); font-weight: 430; line-height: 1.12;
-          color: var(--vhp-text-dark); margin-bottom: 8px;
-          opacity: 0; animation: vhpFadeUp 0.7s 0.35s forwards;
+          opacity: 0;
+          animation: vhpFadeUp 0.7s 0.35s forwards;
         }
-        .vhp-hero-h1 em { font-style: italic; color: var(--vhp-teal); }
         .vhp-hero-sub {
-          font-size: 0.95rem; color: var(--vhp-text-mid); max-width: 460px;
-          line-height: 1.85; margin: 20px 0 36px;
-          opacity: 0; animation: vhpFadeUp 0.7s 0.5s forwards;
+          opacity: 0;
+          animation: vhpFadeUp 0.7s 0.5s forwards;
         }
         .vhp-hero-btns {
-          display: flex; gap: 12px; flex-wrap: wrap;
-          opacity: 0; animation: vhpFadeUp 0.7s 0.65s forwards;
+          opacity: 0;
+          animation: vhpFadeUp 0.7s 0.65s forwards;
         }
-        .vhp-btn-primary {
-          background: var(--vhp-teal); color: white; padding: 12px 28px; border-radius: 40px;
-          font-size: 0.9rem; font-weight: 500; border: none; cursor: pointer;
-          transition: background 0.15s, transform 0.15s;
-          display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-        }
-        .vhp-btn-primary:hover { background: var(--vhp-teal-dark); transform: translateY(-1px); color: white; }
-        .vhp-btn-outline {
-          background: transparent; color: var(--vhp-teal); padding: 11px 26px; border-radius: 40px;
-          font-size: 0.9rem; font-weight: 500; border: 1px solid var(--vhp-teal); cursor: pointer;
-          transition: background 0.15s; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-        }
-        .vhp-btn-outline:hover { background: var(--vhp-teal-light); }
-        
         .vhp-hero-right {
-          position: relative; overflow: hidden;
           background: linear-gradient(160deg, var(--vhp-teal-light) 0%, #eddccc 60%, #f5e6da 100%);
-          display: flex; align-items: flex-end; padding: 48px;
+          align-items: flex-end;
         }
         .vhp-hero-right-pattern {
           position: absolute; inset: 0; opacity: 0.06;
@@ -223,17 +182,6 @@ export default function VivekaHospital() {
         .vhp-hero-badge-num { font-size: 1.5rem; font-weight: 550; color: var(--vhp-primary); line-height: 1; }
         .vhp-hero-badge-txt { font-size: 0.78rem; color: var(--vhp-text-mid); margin-top: 6px; line-height: 1.5; }
 
-        /* --- SHARED SECTION --- */
-        .vhp-section { padding: 96px 72px; }
-        .vhp-title { font-size: 2.3rem; line-height: 1.15; font-weight: 450; color: var(--vhp-text-dark); margin-bottom: 16px; }
-        .vhp-title em { font-style: italic; color: var(--vhp-teal); }
-        .vhp-label {
-          font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
-          letter-spacing: 0.16em; color: var(--vhp-terracotta);
-          margin-bottom: 12px; display: flex; align-items: center; gap: 10px;
-        }
-        .vhp-intro { font-size: 0.95rem; color: var(--vhp-text-mid); line-height: 1.85; max-width: 580px; margin-bottom: 56px; }
-
         /* --- REVEAL ANIMATION --- */
         .vhp-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
         .vhp-reveal.vhp-visible { opacity: 1; transform: none; }
@@ -247,20 +195,19 @@ export default function VivekaHospital() {
                       var(--vhp-sand);
           position: relative; overflow: hidden;
         }
-        .vhp-care-wrapper { max-width: 1280px; margin: 0 auto; }
-        .vhp-care-heading { max-width: 760px; margin-bottom: 56px; }
-        .vhp-care-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: stretch; }
+        .vhp-care-heading { max-width: 760px; margin-bottom: clamp(32px, 4.5vw, 56px); }
+        .vhp-care-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(20px, 2.5vw, 30px); align-items: stretch; }
         
         .vhp-care-main {
           background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
-          border: 1px solid rgba(255,255,255,0.8); border-radius: 34px; padding: 34px;
+          border: 1px solid rgba(255,255,255,0.8); border-radius: 34px; padding: clamp(24px, 3vw, 34px);
           position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.04);
         }
         .vhp-care-panel { position: relative; transition: transform 0.35s ease; }
         .vhp-care-panel:hover { transform: translateX(6px); }
         .vhp-care-top { display: flex; gap: 18px; align-items: center; margin-bottom: 18px; }
         .vhp-care-icon {
-          width: 72px; height: 72px; border-radius: 24px;
+          width: 72px; height: 72px; border-radius: 24px; flex-shrink: 0;
           display: flex; align-items: center; justify-content: center;
           font-size: 1.45rem; position: relative; overflow: hidden;
         }
@@ -282,21 +229,23 @@ export default function VivekaHospital() {
         .vhp-care-feature-card h4 { font-size: 1rem; font-weight: 600; color: var(--vhp-text-dark); margin-bottom: 10px; line-height: 1.4; }
 
         /* --- SERVICES SECTION --- */
-        .vhp-services-section { background: #f8f6f2; position: relative; overflow: hidden; padding: 90px 0; }
-        .vhp-services-container { max-width: 1180px; margin: 0 auto; position: relative; z-index: 2; }
+        .vhp-services-section { background: #f8f6f2; position: relative; overflow: hidden; }
+        .vhp-services-container { position: relative; z-index: 2; }
         
         .vhp-services-stack { display: flex; flex-direction: column; gap: 18px; }
         .vhp-service-showcase { display: block; }
         .vhp-service-side {
           background: rgba(255,255,255,0.92); border: 1px solid rgba(0,0,0,0.06);
-          border-radius: 22px; padding: 30px 32px; position: relative; overflow: hidden;
+          border-radius: 22px; padding: clamp(22px, 3vw, 32px); position: relative; overflow: hidden;
           transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
           box-shadow: 0 8px 24px rgba(0,0,0,0.03);
         }
         .vhp-service-side:hover { transform: translateY(-3px); border-color: rgba(12,115,110,0.12); box-shadow: 0 18px 40px rgba(0,0,0,0.05); }
         .vhp-service-side::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background: linear-gradient(to right, var(--vhp-teal), transparent); }
         .vhp-service-side h3 { font-size:1.38rem; line-height:1.3; font-weight:500; color: var(--vhp-text-dark); margin-bottom:14px; max-width:700px; }
-        .vhp-service-side p { font-size:0.81rem; line-height:1.9; color: var(--vhp-text-mid); margin-bottom:12px; max-width:96%; }
+        .vhp-service-side p + h3 { margin-top: 22px; }
+        .vhp-service-side p { font-size:0.84rem; line-height:1.85; color: var(--vhp-text-mid); margin-bottom:12px; max-width:100%; }
+        .vhp-service-side p:last-child { margin-bottom: 0; }
         .vhp-italic-txt { font-style: italic; font-weight:700; margin-top:3px; }
         
         /* Creative Inline Highlight */
@@ -311,21 +260,21 @@ export default function VivekaHospital() {
           -webkit-box-decoration-break: clone;
         }
 
-        .vhp-services-mini-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:4px; }
+        .vhp-services-mini-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; margin-top:4px; }
         .vhp-mini-service {
-          background:white; border:1px solid rgba(0,0,0,0.06); border-radius:18px; padding:22px;
+          background:white; border:1px solid rgba(0,0,0,0.06); border-radius:18px; padding: clamp(20px, 2.5vw, 24px);
           transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
         .vhp-mini-service:hover { transform: translateY(-3px); border-color: rgba(12,115,110,0.12); box-shadow: 0 12px 30px rgba(0,0,0,0.04); }
         .vhp-mini-service i { width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center; background: var(--vhp-teal-light); color: var(--vhp-teal); font-size:0.82rem; margin-bottom:14px; }
-        .vhp-mini-service h4 { font-size:0.88rem; line-height:1.4; margin-bottom: 6px; color: var(--vhp-text-dark); }
-        .vhp-mini-service p { font-size:0.75rem; line-height:1.75; margin-bottom: 8px; color: var(--vhp-text-mid); }
+        .vhp-mini-service h4 { font-size:0.9rem; line-height:1.4; margin-bottom: 6px; color: var(--vhp-text-dark); }
+        .vhp-mini-service p { font-size:0.78rem; line-height:1.75; margin-bottom: 8px; color: var(--vhp-text-mid); }
+        .vhp-mini-service p:last-child { margin-bottom: 0; }
 
         /* --- TEAM SECTION --- */
         .vhp-team-section { background: var(--vhp-cream); }
-        .vhp-team-header { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 56px; }
-        .vhp-team-row1 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 18px; }
-        .vhp-team-row2 { display: flex; justify-content: center; gap: 18px; }
+        .vhp-team-row1 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+        .vhp-team-row2 { display: flex; justify-content: center; gap: 18px; margin-top: 18px; }
         .vhp-team-row2 .vhp-team-card { width: calc((100% - 54px) / 4); }
         
         .vhp-team-card {
@@ -364,9 +313,9 @@ export default function VivekaHospital() {
         .vhp-modal-body p { font-size: 0.88rem; color: var(--vhp-text-mid); line-height: 1.9; }
 
         /* --- FAQ SECTION --- */
-        .vhp-faq-section { background: var(--vhp-cream); padding: 96px 72px; }
+        .vhp-faq-section { background: var(--vhp-cream); }
         .vhp-faq-section .vhp-label { color: var(--vhp-muted-teal); }
-        .vhp-faq-section .vhp-title { color: var(--vhp-primary); margin-bottom: 48px; }
+        .vhp-faq-section .vhp-title { color: var(--vhp-primary); margin-bottom: clamp(32px, 4vw, 48px); }
         .vhp-faq-section .vhp-title em { color: var(--vhp-muted-teal); }
         .vhp-faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; }
         .vhp-faq-item { padding: 28px 30px; background: #1e2c30; cursor: pointer; transition: background 0.25s; border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -383,42 +332,40 @@ export default function VivekaHospital() {
         }
 
         @media (max-width: 1024px) {
-          .vhp-section, .vhp-faq-section { padding: 72px 36px; }
-          .vhp-hero { grid-template-columns: 1fr; margin-top: 100px; }
-          .vhp-hero-right { min-height: 360px; }
           .vhp-care-layout { grid-template-columns: 1fr; }
           .vhp-care-grid { grid-template-columns: 1fr 1fr; }
-          .vhp-team-header, .vhp-faq-grid { grid-template-columns: 1fr; }
+          .vhp-faq-grid { grid-template-columns: 1fr; }
           .vhp-team-row1 { grid-template-columns: 1fr 1fr; }
-          .vhp-team-row2 { grid-template-columns: 1fr 1fr; flex-wrap: wrap; }
+          .vhp-team-row2 { flex-wrap: wrap; }
           .vhp-team-row2 .vhp-team-card { width: calc(50% - 9px); }
           .vhp-services-mini-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 640px) {
-          .vhp-section, .vhp-faq-section { padding: 56px 20px; }
-          .vhp-hero-left { padding: 48px 24px; }
-          .vhp-services-mini-grid, .vhp-team-row1, .vhp-team-row2, .vhp-care-grid { grid-template-columns: 1fr; }
+          .vhp-services-mini-grid, .vhp-team-row1, .vhp-care-grid { grid-template-columns: 1fr; }
           .vhp-team-row2 .vhp-team-card { width: 100%; }
-          .vhp-care-main { padding: 26px; }
+          .vhp-care-top { align-items: flex-start; }
           .vhp-care-panel p { padding-left: 0; }
-          .vhp-care-panel h3 { font-size: 1.35rem; }
+          .vhp-care-panel h3 { font-size: 1.25rem; }
+          .vhp-faq-item { padding: 22px 20px; }
+          .vhp-modal-header { padding: 28px 20px 20px; flex-direction: column; }
+          .vhp-modal-body { padding: 20px; }
         }
       `}</style>
 
       {/* HERO */}
       <section className="vhp-hero" id="hero">
         <div className="vhp-hero-left">
-          <div className="vhp-hero-eyebrow">Viveka Hospital</div>
+          <div className="vhp-hero-eyebrow">Viveka Chethana</div>
           <h1 className="vhp-hero-h1">
-            Comprehensive <br />
-            <em>Mental Healthcare, Critical Care, De-Addiction, Rehabilitation</em> <br />
+            Comprehensive
+            <em> Mental Healthcare, Critical Care, De-Addiction, Rehabilitation </em>
             and <em>Recovery</em>
           </h1>
           <p className="vhp-hero-sub">
             Specialised inpatient care designed to support individuals and families through every stage of emotional wellbeing, recovery, and rehabilitation.
             <br /><br />
-            Mental health challenges can feel overwhelming, not only for individuals, but for families too. At Viveka Hospital, we provide compassionate, evidence-based mental healthcare through personalised treatment pathways designed around every individual’s needs.
+            Mental health challenges can feel overwhelming, not only for individuals, but for families too. At Viveka Chethana, we provide compassionate, evidence-based mental healthcare through personalised treatment pathways designed around every individual’s needs.
             <br /><br />
             From acute psychiatric care and de-addiction support to rehabilitation, therapy, and long-term recovery, our multidisciplinary team works together to ensure holistic, respectful, and meaningful care.
           </p>
@@ -448,7 +395,7 @@ export default function VivekaHospital() {
             <h2 className="vhp-title">Outpatient &amp; Inpatient Care</h2>
             <span className="vhp-label">Care Designed Around Individual Needs</span>
             <p className="vhp-intro">
-              At Viveka Hospital, we provide both outpatient (OP) and inpatient (IP) psychiatric services to ensure continuity of care at every stage of recovery.
+              At Viveka Chethana, we provide both outpatient (OP) and inpatient (IP) psychiatric services to ensure continuity of care at every stage of recovery.
             </p>
           </div>
 
@@ -540,7 +487,7 @@ export default function VivekaHospital() {
                 <p className="vhp-italic-txt">Supporting Mental Wellbeing Through Every Stage of Adulthood</p>
                 <p>Adulthood often brings emotional, professional, and personal challenges that can significantly impact mental wellbeing.</p>
                 <p>Our General Adult Psychiatry services support individuals experiencing <span className="vhp-hl">emotional distress</span>, <span className="vhp-hl">anxiety, depression, mood disorders</span>, <span className="vhp-hl">psychosis</span>, behavioural changes, relationship challenges, and other psychiatric conditions.</p>
-                <p>At Viveka Hospital, treatment plans are <span className="vhp-hl">personalised</span> and designed around the individual’s unique emotional, social, and clinical needs — ensuring meaningful and <span className="vhp-hl">sustainable progress</span>.</p>
+                <p>At Viveka Chethana, treatment plans are <span className="vhp-hl">personalised</span> and designed around the individual’s unique emotional, social, and clinical needs — ensuring meaningful and <span className="vhp-hl">sustainable progress</span>.</p>
               </div>
             </article>
 
@@ -611,7 +558,7 @@ export default function VivekaHospital() {
                 <h3>Healing Environment</h3>
                 <p className="vhp-italic-txt">Designed for Comfort, Safety, and Recovery</p>
                 <p>Our facilities are thoughtfully designed to provide safe, structured, and calming environments that support healing and emotional well-being.</p>
-                <p>From counselling and therapy rooms and inpatient facilities to rehabilitation spaces and consultation areas, every aspect of Viveka Hospital is designed to support comfort, dignity, and meaningful recovery.</p>
+                <p>From counselling and therapy rooms and inpatient facilities to rehabilitation spaces and consultation areas, every aspect of Viveka Chethana is designed to support comfort, dignity, and meaningful recovery.</p>
                 <p>This extends to an on-site pharmacy, a canteen serving nutritious and well-prepared food, high standards of cleanliness and hygiene, attentive nursing care, and dedicated activity areas for yoga, prayer, and meditation—so daily needs and holistic well-being are supported alongside clinical care.</p>
               </div>
             </article>
@@ -648,60 +595,64 @@ export default function VivekaHospital() {
           ))}
         </div>
 
-        <div className="vhp-team-row2">
-          {TEAM_MEMBERS.slice(4).map((m, i) => (
-            <div key={m.name} className={`vhp-team-card vhp-reveal vhp-rd${(i % 3) + 1}`} onClick={() => setSelectedMember(m)}>
-              <div className="vhp-team-photo">
-                <div className="vhp-team-photo-initials">{m.initials}</div>
-                <div className="vhp-team-photo-overlay">
-                  <button className="vhp-team-photo-cta"><i className="fas fa-user"></i> View Profile</button>
+                  {TEAM_MEMBERS.length > 4 && (
+                    <div className="vhp-team-row2">
+                      {TEAM_MEMBERS.slice(4).map((m, i) => (
+              <div key={m.name} className={`vhp-team-card vhp-reveal vhp-rd${(i % 3) + 1}`} onClick={() => setSelectedMember(m)}>
+                <div className="vhp-team-photo">
+                  <div className="vhp-team-photo-initials">{m.initials}</div>
+                  <div className="vhp-team-photo-overlay">
+                    <button className="vhp-team-photo-cta"><i className="fas fa-user"></i> View Profile</button>
+                  </div>
+                </div>
+                <div className="vhp-team-info">
+                  <div className="vhp-team-name">{m.name}</div>
+                  <div className="vhp-team-title">{m.role}</div>
                 </div>
               </div>
-              <div className="vhp-team-info">
-                <div className="vhp-team-name">{m.name}</div>
-                <div className="vhp-team-title">{m.role}</div>
+            ))}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+        )}
+            </section>
 
-      {/* TEAM MODAL */}
-      {selectedMember && (
-        <div className="vhp-overlay vhp-open" onClick={(e) => { if (e.target === e.currentTarget) setSelectedMember(null); }}>
-          <div className="vhp-modal">
-            <div className="vhp-modal-header">
-              <button className="vhp-modal-close" onClick={() => setSelectedMember(null)}><i className="fas fa-times"></i></button>
-              <div className="vhp-modal-photo">{selectedMember.initials}</div>
-              <div>
-                <div className="vhp-modal-name">{selectedMember.name}</div>
-                <div className="vhp-modal-role">{selectedMember.role}</div>
+      {/* TEAM MODAL */ }
+      { selectedMember && (
+              <div className="vhp-overlay vhp-open" onClick={(e) => { if (e.target === e.currentTarget) setSelectedMember(null); }}>
+                <div className="vhp-modal">
+                  <div className="vhp-modal-header">
+                    <button className="vhp-modal-close" onClick={() => setSelectedMember(null)}><i className="fas fa-times"></i></button>
+                    <div className="vhp-modal-photo">{selectedMember.initials}</div>
+                    <div>
+                      <div className="vhp-modal-name">{selectedMember.name}</div>
+                      <div className="vhp-modal-role">{selectedMember.role}</div>
+                    </div>
+                  </div>
+                  <div className="vhp-modal-body" dangerouslySetInnerHTML={{ __html: `<p>${selectedMember.bio}</p>` }} />
+                </div>
               </div>
-            </div>
-            <div className="vhp-modal-body" dangerouslySetInnerHTML={{ __html: `<p>${selectedMember.bio}</p>` }} />
-          </div>
-        </div>
-      )}
+            )}
 
-      {/* FAQS */}
-      <section className="vhp-faq-section" id="faq">
-        <h2 className="vhp-title vhp-reveal vhp-rd1">Frequently Asked <em>Questions</em></h2>
-        <div className="vhp-faq-grid">
-          {FAQS.map((faq, i) => (
-            <div
-              key={i}
-              className={`vhp-faq-item vhp-reveal vhp-rd${(i % 2) + 1} ${openFaqIndex === i ? 'vhp-active' : ''}`}
-              onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
-            >
-              <div className="vhp-faq-q">
-                {faq.q}
-                <div className="vhp-faq-toggle"><i className="fas fa-plus"></i></div>
+          {/* FAQS */}
+            <section className="vhp-section vhp-faq-section" id="faq">
+              <div className="vhp-faq-header">
+                <h2 className="vhp-title vhp-reveal vhp-rd1">Frequently Asked <em>Questions</em></h2>
               </div>
-              <div className="vhp-faq-a">{faq.a}</div>
-            </div>
-          ))}
+              <div className="vhp-faq-grid">
+                {FAQS.map((faq, i) => (
+                  <div
+                    key={i}
+                    className={`vhp-faq-item vhp-reveal vhp-rd${(i % 2) + 1} ${openFaqIndex === i ? 'vhp-active' : ''}`}
+                    onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  >
+                    <div className="vhp-faq-q">
+                      {faq.q}
+                      <div className="vhp-faq-toggle"><i className="fas fa-plus"></i></div>
+                    </div>
+                    <div className="vhp-faq-a">{faq.a}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
         </div>
-      </section>
-    </div>
-  );
+        );
 }

@@ -240,12 +240,12 @@ export default function Admissions() {
               <div className="map-placeholder">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.224295596289!2d76.73637357482944!3d12.300676587956456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7354fd6f1259%3A0x2788a8e0ff317ee3!2sViveka%20Hospital!5e0!3m2!1sen!2sin!4v1773991818096!5m2!1sen!2sin"
-                  allowFullScreen loading="lazy" title="Viveka Hospital"
+                  allowFullScreen loading="lazy" title="Viveka Chethana"
                 />
               </div>
               <div className="map-info">
                 <span className="map-type">Hospital</span>
-                <h3>Viveka Hospital</h3>
+                <h3>Viveka Chethana</h3>
                 <p>#4, Ganga Nagar, Off Mysore Bannur Road, Vajamangala, Mysore – 570028</p>
                 <span className="map-hours"><i className="fas fa-clock" /> Open 24×7 — including emergencies &amp; admissions</span>
               </div>
@@ -255,12 +255,12 @@ export default function Admissions() {
               <div className="map-placeholder">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.8490369954166!2d76.61100347786095!3d12.325946056819895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b797d09a9d9%3A0x4e3a7d211e06c9ec!2sViveka%20Clinic!5e0!3m2!1sen!2sin!4v1773992173132!5m2!1sen!2sin"
-                  allowFullScreen loading="lazy" title="Viveka Clinic"
+                  allowFullScreen loading="lazy" title="Viveka Sparsha"
                 />
               </div>
               <div className="map-info">
-                <span className="map-type">Outpatient Clinic</span>
-                <h3>Viveka Outpatient Clinic</h3>
+                <span className="map-type">Outpatient Care</span>
+                <h3>Viveka Sparsha</h3>
                 <p>511, Kalidasa Road, Vijayanagar 1st Stage, Mysuru – 570017</p>
                 <span className="map-hours"><i className="fas fa-clock" /> Mon – Sat, 10:00 AM – 8:00 PM</span>
               </div>

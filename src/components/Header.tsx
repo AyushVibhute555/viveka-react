@@ -6,8 +6,8 @@ import chaitanyaLogo from '../assets/viveka chitanya logo.png';
 import spoorthiLogo from '../assets/viveka spoorthi.png';
 
 const PAGE_LOGOS: Record<string, { src: string; alt: string }> = {
-  '/viveka-hospital': { src: hospitalLogo, alt: 'Viveka Hospital' },
-  '/viveka-clinic': { src: clinicLogo, alt: 'Viveka Clinic' },
+  '/viveka-chethana': { src: hospitalLogo, alt: 'Viveka Chethana' },
+  '/viveka-sparsha': { src: clinicLogo, alt: 'Viveka Sparsha' },
   '/viveka-chaitanya': { src: chaitanyaLogo, alt: 'Viveka Chaitanya' },
   '/viveka-spoorthi': { src: spoorthiLogo, alt: 'Viveka Spoorthi' },
 };
@@ -39,12 +39,12 @@ export default function Header() {
             <Link to="/">Home</Link>
           </li>
 
-          <li className={is('/viveka-hospital') ? 'active' : ''}>
-            <Link to="/viveka-hospital">Viveka Hospital</Link>
+          <li className={is('/viveka-chethana') ? 'active' : ''}>
+            <Link to="/viveka-chethana">Viveka Chethana</Link>
           </li>
 
-          <li className={is('/viveka-clinic') ? 'active' : ''}>
-            <Link to="/viveka-clinic">Viveka Clinic</Link>
+          <li className={is('/viveka-sparsha') ? 'active' : ''}>
+            <Link to="/viveka-sparsha">Viveka Sparsha</Link>
           </li>
 
           <li className={is('/viveka-chaitanya') ? 'active' : ''}>
@@ -94,8 +94,8 @@ export default function Header() {
       {mobileOpen && (
         <div id="mobile-menu" className="mobile-menu open" aria-label="Mobile navigation">
           <Link to="/" onClick={close}>Home</Link>
-          <Link to="/viveka-hospital" onClick={close}>Viveka Hospital</Link>
-          <Link to="/viveka-clinic" onClick={close}>Viveka Clinic</Link>
+          <Link to="/viveka-chethana" onClick={close}>Viveka Chethana</Link>
+          <Link to="/viveka-sparsha" onClick={close}>Viveka Sparsha</Link>
           <Link to="/viveka-chaitanya" onClick={close}>Viveka Chaitanya</Link>
           <Link to="/viveka-spoorthi" onClick={close}>Viveka Spoorthi</Link>
           <Link to="/careers" onClick={close}>Careers</Link>

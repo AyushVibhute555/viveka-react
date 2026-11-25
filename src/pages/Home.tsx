@@ -34,7 +34,7 @@ const TESTIMONIALS: Testimonial[] = [
     avatar: 'CG',
     name: 'Chandana G',
     short:
-      'We are extremely satisfied with the care and treatment our father is receiving during his stay at Viveka Hospital, Vajamangala.',
+      'We are extremely satisfied with the care and treatment our father is receiving during his stay at Viveka Chethana, Vajamangala.',
     full:
       'The medical team is professional and attentive. The facilities are clean and comfortable. Special thanks to the staff for their kindness and dedication. We appreciate the excellent service and would highly recommend this hospital.',
   },
@@ -42,9 +42,9 @@ const TESTIMONIALS: Testimonial[] = [
     avatar: 'FZ',
     name: 'Fathima Zahra',
     short:
-      'We recently had our mother admitted for Dementia and other issues at Viveka Hospital Mysuru, and we are very grateful for the kindness and professionalism shown throughout her stay.',
+      'We recently had our mother admitted for Dementia and other issues at Viveka Chethana Mysuru, and we are very grateful for the kindness and professionalism shown throughout her stay.',
     full:
-      'The doctors, nurses, and supporting staff were patient, compassionate, and always took time to explain every step of her treatment.<br><br>We sincerely thank <strong>Dr. Vasu and Shekhar</strong>. The team made sure she was comfortable and treated with dignity. It made a difficult time much easier for us. Highly recommend Viveka Hospital for their exceptional care and support for patients and their families.',
+      'The doctors, nurses, and supporting staff were patient, compassionate, and always took time to explain every step of her treatment.<br><br>We sincerely thank <strong>Dr. Vasu and Shekhar</strong>. The team made sure she was comfortable and treated with dignity. It made a difficult time much easier for us. Highly recommend Viveka Chethana for their exceptional care and support for patients and their families.',
   },
   {
     avatar: 'SK',
@@ -73,13 +73,13 @@ const TIMELINE = [
   },
   {
     year: '2019',
-    title: 'Viveka Hospital',
+    title: 'Viveka Chethana',
     summary: 'Integrated Mental Healthcare Model',
     sub: 'Building multidisciplinary care through psychiatry, psychology, acute care, rehabilitation, and family support.',
   },
   {
     year: '2020',
-    title: 'Viveka Clinic',
+    title: 'Viveka Sparsha',
     summary: 'Mental Healthcare and Rehabilitation Center',
     sub: 'Expansion of outpatient psychiatric consultations, counselling, and emotional well-being services.',
   },
@@ -108,7 +108,7 @@ const LEADERS = [
     name: 'Mr. Arun Kumar',
     role: 'Founder & Operations Head',
     img: 'images/team/arun.jpg',
-    bio: 'Mr. Arun Kumar is a Social Entrepreneur and impact-driven leader with over 25 years of experience in community development, education, housing, and mental healthcare initiatives. At Viveka Hospital, he leads strategic and operational initiatives focused on creating compassionate, scalable, and sustainable mental healthcare ecosystems. Driven by a deep commitment to social impact, he envisions integrated models of care that combine ethics, accessibility, rehabilitation, and holistic well-being, with the goal of transforming the way mental health and community care are delivered.',
+    bio: 'Mr. Arun Kumar is a Social Entrepreneur and impact-driven leader with over 25 years of experience in community development, education, housing, and mental healthcare initiatives. At Viveka, he leads strategic and operational initiatives focused on creating compassionate, scalable, and sustainable mental healthcare ecosystems. Driven by a deep commitment to social impact, he envisions integrated models of care that combine ethics, accessibility, rehabilitation, and holistic well-being, with the goal of transforming the way mental health and community care are delivered.',
   },
   {
     name: 'Dr. Murali Krishna T N',
@@ -149,22 +149,22 @@ const HERO_PANELS = [
   {
     key: 'hospital',
     num: '01',
-    eyebrow: 'Viveka Hospital',
+    eyebrow: 'Viveka Chethana',
     title: 'Mental Healthcare & Rehabilitation',
     sub: 'Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.',
-    to: '/viveka-hospital',
-    cta: 'Explore Viveka Hospital',
+    to: '/viveka-chethana',
+    cta: 'Explore Viveka Chethana',
     icon: 'fa-hospital-alt',
     img: vivekaHospital,
   },
   {
     key: 'clinic',
     num: '02',
-    eyebrow: 'Viveka Clinic',
+    eyebrow: 'Viveka Sparsha',
     title: 'Consultations, Therapy & Emotional Wellbeing',
     sub: 'Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.',
-    to: '/viveka-clinic',
-    cta: 'Explore Viveka Clinic',
+    to: '/viveka-sparsha',
+    cta: 'Explore Viveka Sparsha',
     icon: 'fa-clinic-medical',
     img: vivekaClinic,
   },
@@ -352,7 +352,7 @@ export default function Home() {
       <section className="about" id="about">
         <div className="about-header">
           <h2 className="about-title">
-            Thoughtful Mental Healthcare, Designed Around <em>Every Stage of Life</em>
+            Thoughtful Mental Healthcare,<br></br> Designed Around <em>Every Stage of Life</em>
           </h2>
           <p className="about-lead">
             An integrated ecosystem of mental healthcare, rehabilitation, emotional wellbeing, and geriatric support.
@@ -365,24 +365,24 @@ export default function Home() {
             <div className="about-body">
               <p>Mental health journeys are deeply personal, and no two paths look the same. At Viveka, we provide specialised care through dedicated institutions designed to support individuals at every stage — from outpatient consultations and therapy to inpatient recovery, rehabilitation, and geriatric care.</p>
               <p>At Viveka, we believe mental healthcare should be warm, accessible, and deeply human. We are committed to supporting individuals, children, older adults, and families.</p>
-              <p>Our integrated ecosystem brings together <strong>Viveka Hospital, Viveka Clinic, Viveka Chaitanya, and Viveka Spoorthi</strong> — our newest institution, to provide personalised support for every stage of mental health and recovery.</p>
+              <p>Our integrated ecosystem brings together <strong>Viveka Chethana, Viveka Sparsha, Viveka Chaitanya, and Viveka Spoorthi</strong> — our newest institution, to provide personalised support for every stage of mental health and recovery.</p>
               <p>Whether someone requires immediate psychiatric care, therapy, long-term rehabilitation, dementia support, or emotional guidance, we strive to ensure that every person feels seen, heard, and supported.</p>
             </div>
           </div>
 
           <div className="about-right">
             <div className="about-institutions-grid">
-              <Link to="/viveka-hospital" className="inst-feature-card hosp">
+              <Link to="/viveka-chethana" className="inst-feature-card hosp">
                 <div className="inst-feature-icon"><i className="fas fa-hospital-alt" /></div>
                 <div>
-                  <h4>Viveka Hospital</h4>
+                  <h4>Viveka Chethana</h4>
                   <p>Comprehensive inpatient and outpatient psychiatric care, emergency mental health support, de-addiction services, and structured rehabilitation designed to support long-term recovery.</p>
                 </div>
               </Link>
-              <Link to="/viveka-clinic" className="inst-feature-card clinic">
+              <Link to="/viveka-sparsha" className="inst-feature-card clinic">
                 <div className="inst-feature-icon"><i className="fas fa-clinic-medical" /></div>
                 <div>
-                  <h4>Viveka Clinic</h4>
+                  <h4>Viveka Sparsha</h4>
                   <p>Expert psychiatric consultations, therapy, counselling, assessments, and follow-up care for individuals, children, older adults, and families.</p>
                 </div>
               </Link>

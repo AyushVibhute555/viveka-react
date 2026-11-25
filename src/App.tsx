@@ -1,12 +1,12 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import StickyBar from './components/StickyBar';
 
 import Home from './pages/Home';
-import VivekaHospital from './pages/VivekaHospital';
-import VivekaClinic from './pages/VivekaClinic';
+import VivekaChethana from './pages/VivekaChethana';
+import VivekaSparsha from './pages/VivekaSparsha';
 import VivekaChaitanya from './pages/VivekaChaitanya';
 import VivekaSpoorthi from './pages/VivekaSpoorthi';
 import Careers from './pages/Careers';
@@ -35,8 +35,10 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/viveka-hospital" element={<VivekaHospital />} />
-          <Route path="/viveka-clinic" element={<VivekaClinic />} />
+          <Route path="/viveka-chethana" element={<VivekaChethana />} />
+          <Route path="/viveka-sparsha" element={<VivekaSparsha />} />
+          <Route path="/viveka-hospital" element={<Navigate to="/viveka-chethana" replace />} />
+          <Route path="/viveka-clinic" element={<Navigate to="/viveka-sparsha" replace />} />
           <Route path="/viveka-chaitanya" element={<VivekaChaitanya />} />
           <Route path="/viveka-spoorthi" element={<VivekaSpoorthi />} />
           <Route path="/careers" element={<Careers />} />
