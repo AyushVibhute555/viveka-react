@@ -329,9 +329,9 @@ export default function Home() {
             </div>
 
             <div className="hero-panel-content">
-              <div className="hero-panel-icon">
-                <i className={`fas ${p.icon}`} />
-              </div>
+              {/* <div className="hero-panel-icon">
+                {/* <i className={`fas ${p.icon}`} /> */}
+              {/* </div> */} 
               <div className="hero-panel-eyebrow">{p.eyebrow}</div>
               <h2>{p.title}</h2>
               <p className="hero-panel-sub">{p.sub}</p>
